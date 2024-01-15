@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Love</title>
+    <style>
+      html {
+        position: relative;
+        min-height: 100%;
+      }
+
+      body {
+        text-align: center;
+        background-image: url("http://lorempixel.com/650/650/city/");
+        background-size: cover;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        font-family: "Open Sans Condensed", sans-serif;
+      }
+
+      .overlay {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        overflow: hidden;
+        background: rgba(0, 0, 0, 0.8);
+      }
+
+      .content {
+        width: 75%;
+        position: relative;
+        margin: 2% auto;
+        padding: 8px;
+      }
+
+      .content h1 {
+        font-size: 3em;
+        color: #fff;
+        letter-spacing: 3px;
+        padding: 25px 0px;
+        text-transform: uppercase;
+      }
+
+      .content .input-group {
+        margin: 0 auto;
+        width: 75%;
+      }
+
+      .content p {
+        color: #fff;
+        line-height: 30px;
+        padding-bottom: 12px;
+      }
+
+      @media (max-width: 450px) {
+        .content h1 {
+          letter-spacing: 2px;
+          font-size: 25px;
+        }
+        .content .input-group {
+          margin: 0 auto;
+          width: 100%;
+        }
+      }
+
+      .content ul.social {
+        margin-top: 45px;
+      }
+
+      .content li a {
+        color: #fff;
+        margin: 2%;
+      }
+
+      .blink_me {
+  animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {  
+  50% { opacity: 0; }
+}
+    </style>
+
+    <script>
+      /* Under Construction Template
+       * by: Aleks Bella
+       */
+
+      $(function () {
+        $("#btn-ok").on("click", function () {
+          if ($("#emailadd").val().length === 0) {
+            alert("Please enter your email to subscribe.");
+          } else {
+            $(".input-group-lg")
+              .css("color", "#f90")
+              .html("Thanks for the subscription.");
+            $("#myModal").modal("show");
+          }
+        });
+      });
+    </script>
+  </head>
+
+  <body>
+    <div class="overlay"></div>
+    <div class="wrap">
+      <div class="content">
+        <h1><span class="glyphicon glyphicon-road"></span></h1>
+        <p>Your visit is appreciated.</p>
+        <h1>
+          kindly reach out to
+          <hr />
+          <span class="blink_me" style="color: #fb0">Md. Shadab Zakaria</span>
+        </h1>
+        <p><strong>For access to this website</strong></p>
+      </div>
+      <!-- END #CONTENT -->
+    </div>
+    <!-- END #WRAP -->
+  </body>
+</html>
